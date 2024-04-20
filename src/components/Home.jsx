@@ -28,7 +28,7 @@ export default function Home() {
     setTimeout(() => {
       fetch();
       setcount(count + 1);
-    }, 2 * 1000);
+    }, 10 * 1000);
   }, [dispatch, count]);
 
   const columns = [
@@ -65,6 +65,7 @@ export default function Home() {
     {
       Header: () => <h3 className="row-design">Action</h3>,
       Cell: (props) => {
+        console.log("console===========>", props);
         return (
           <Button
             variant="outlined"
